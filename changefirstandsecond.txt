@@ -1,0 +1,41 @@
+package changefirstandsecond;
+
+import java.util.Scanner;
+
+public class Swap {
+/*
+ Get 2 numbers from user then swap the numbers
+ user ==> a=2 and b=5 then a=5 and b=2
+ */
+	public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);	
+	System.out.println("Enter the first integer...");
+	int first = scan.nextInt();
+
+System.out.println("Enter the second integer...");
+int second = scan.nextInt();
+
+System.out.println("Before swap: " + first + " - " + second);
+// first way: By using 3rd container...
+//int temporary = 0;
+//temporary = first;
+//first = second;
+//second = temporary;
+//
+//System.out.println("After swap: " + first + " - " + second + " - " + temporary);
+//second way without using 3rd container...
+
+first = first + second;
+second = first - second;
+first = first - second;
+
+System.out.println("After swap: " + first + " - " + second);
+
+
+
+
+scan.close();
+
+	}
+
+}
